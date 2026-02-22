@@ -22,7 +22,7 @@ const workHistory = [
   {
     period: "March 2025 – present",
     company: "Sykehuspartner",
-    role: "IT Consultant",
+    role: "Datacenter IT Consultant",
     tasks: [
       "Datacenter operations and infrastructure work",
       "Stability, security, and documentation",
@@ -73,7 +73,7 @@ const About = () => {
       <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.1 }} className="glass p-8 mb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm">
           {[
-            { label: "Role", value: "IT Consultant" },
+            { label: "Role", value: "Datacenter IT Consultant" },
             { label: "Since", value: "March 2025" },
             { label: "Languages", value: "Norwegian / English" },
             { label: "Email", value: "andreas@revdal.no" },

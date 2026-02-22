@@ -6,14 +6,12 @@ import { Link } from "react-router-dom";
 const subjectOptions = [
   { value: "consulting", label: "Consulting inquiry" },
   { value: "collaboration", label: "Collaboration" },
-  { value: "job", label: "Job opportunity" },
   { value: "other", label: "Other" },
 ];
 
 const messageTemplates: Record<string, string> = {
   consulting: "Hi Andreas,\n\nI'm reaching out regarding a consulting opportunity. I'd love to discuss how your expertise in infrastructure could help us.\n\nLooking forward to hearing from you.",
   collaboration: "Hi Andreas,\n\nI came across your work and think we could collaborate on something great. Let me know if you're open to discussing further.",
-  job: "Hi Andreas,\n\nWe have an exciting role that matches your skillset. I'd love to share more details with you.\n\nBest regards,",
   other: "",
 };
 
@@ -61,7 +59,7 @@ const Home = () => {
             <span className="text-foreground">Revdal</span>
           </h1>
           <p className="text-lg text-muted-foreground mx-auto max-w-md mb-8">
-            IT Consultant — building and securing infrastructure.
+            Datacenter IT Consultant — building and securing infrastructure.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <button
