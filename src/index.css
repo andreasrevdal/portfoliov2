@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 15% 8%;
+    --foreground: 30 10% 88%;
+
+    --card: 220 12% 12%;
+    --card-foreground: 30 10% 88%;
+
+    --popover: 220 12% 12%;
+    --popover-foreground: 30 10% 88%;
+
+    --primary: 24 85% 58%;
+    --primary-foreground: 220 15% 8%;
+
+    --secondary: 220 10% 16%;
+    --secondary-foreground: 30 8% 75%;
+
+    --muted: 220 10% 15%;
+    --muted-foreground: 220 8% 50%;
+
+    --accent: 24 85% 58%;
+    --accent-foreground: 220 15% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 24 85% 58%;
+
+    --radius: 0.75rem;
+
+    --glass-border: 220 10% 22%;
+
+    --sidebar-background: 220 12% 10%;
+    --sidebar-foreground: 30 10% 88%;
+    --sidebar-primary: 24 85% 58%;
+    --sidebar-primary-foreground: 220 15% 8%;
+    --sidebar-accent: 220 10% 16%;
+    --sidebar-accent-foreground: 30 10% 88%;
+    --sidebar-border: 220 10% 20%;
+    --sidebar-ring: 24 85% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  ::selection {
+    background: hsl(24 85% 58% / 0.3);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/70 backdrop-blur-xl border border-glass-border rounded-xl;
+  }
+
+  .glow-border {
+    box-shadow: 0 0 20px -4px hsl(24 85% 58% / 0.25),
+                inset 0 0 20px -4px hsl(24 85% 58% / 0.05);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-orange-400 to-amber-300;
+  }
+}
+
+/* Fix native select dropdown */
+@layer base {
+  select option {
+    background: hsl(220 12% 12%);
+    color: hsl(30 10% 88%);
+  }
+}
